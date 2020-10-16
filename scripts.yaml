@@ -1,0 +1,17 @@
+restart_ha:
+  alias: Restart HA
+  sequence:
+  - service: homeassistant.restart
+    data: {}
+  mode: single
+  icon: mdi:reload
+'1602661543977':
+  alias: Play test music
+  sequence:
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.mpd
+      media_content_id: local:track:test.mp3
+      media_content_type: music
+  mode: single
+  icon: mdi:music-circle-outline

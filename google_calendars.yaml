@@ -1,0 +1,20 @@
+- cal_id: nolanasd123@gmail.com
+  entities:
+  - device_id: nolanasd123_gmail_com
+    ignore_availability: true
+    name: nolanasd123@gmail.com
+    track: true
+
+- cal_id: addressbook#contacts@group.v.calendar.google.com
+  entities:
+  - device_id: contacts
+    ignore_availability: true
+    name: Contacts
+    track: true
+
+- cal_id: zh.taiwan#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: holidays_in_taiwan
+    ignore_availability: true
+    name: Holidays in Taiwan
+    track: true

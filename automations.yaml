@@ -1,0 +1,53 @@
+- id: '1602468784679'
+  alias: snapshot_partial at midnight
+  description: ''
+  trigger:
+  - platform: time
+    at: 00:00:00
+  condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+  action:
+  - service: hassio.snapshot_partial
+    data: {}
+  mode: single
+- id: '1602469065748'
+  alias: snapshot_full in the weekend
+  description: ''
+  trigger:
+  - platform: time
+    at: 00:00:00
+  condition:
+  - condition: time
+    weekday:
+    - sun
+  action:
+  - service: hassio.snapshot_full
+    data: {}
+  mode: single
+- id: '1602646670735'
+  alias: Time to wake up!
+  description: ''
+  trigger:
+  - platform: time
+    at: 08:30:00
+  condition: []
+  action:
+  - scene: scene.wake_up
+  mode: single
+- id: '1602647976343'
+  alias: Time to sleep~
+  description: ''
+  trigger:
+  - platform: time
+    at: 00:00:00
+  condition: []
+  action:
+  - scene: scene.shui_jue
+  mode: single

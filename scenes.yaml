@@ -1,0 +1,107 @@
+- id: '1602436106862'
+  name: SLEEP
+  entities:
+    light.l1:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 8
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: 書桌燈
+      supported_features: 3
+      state: 'on'
+    light.yi_gui_deng:
+      min_mireds: 175
+      max_mireds: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: 衣櫃燈
+      supported_features: 3
+      state: 'off'
+    light.yu_shi_men_kou_deng:
+      min_mireds: 175
+      max_mireds: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: 浴室門口燈
+      supported_features: 3
+      state: 'off'
+  icon: mdi:sleep
+- id: '1602436184780'
+  name: Wake UP!
+  entities:
+    light.l1:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 255
+      color_temp: 175
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: 書桌燈
+      supported_features: 3
+      state: 'on'
+    light.yi_gui_deng:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 255
+      color_temp: 175
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: 衣櫃燈
+      supported_features: 3
+      state: 'on'
+    light.yu_shi_men_kou_deng:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 255
+      color_temp: 175
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: 浴室門口燈
+      supported_features: 3
+      state: 'on'
+  icon: mdi:weather-sunny
+- id: '1602469659072'
+  name: Relax
+  entities:
+    light.l1:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 255
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: 書桌燈
+      supported_features: 3
+      state: 'on'
+    light.yi_gui_deng:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 255
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: 衣櫃燈
+      supported_features: 3
+      state: 'on'
+    light.yu_shi_men_kou_deng:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 255
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: 浴室門口燈
+      supported_features: 3
+      state: 'on'
+  icon: mdi:emoticon-kiss-outline

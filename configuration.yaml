@@ -1,0 +1,51 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+# lovelace:
+#   mode: yaml
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+light:
+  - platform: xiaomi_miio
+    name: desk_bulb
+    host: 192.168.31.159
+    token: !secret desk_bulb_token
+    # model: philips.light.bub
+
+  - platform: xiaomi_miio
+    name: closet_bulb
+    host: 192.168.31.191
+    token: !secret closet_bulb_token
+
+  - platform: xiaomi_miio
+    name: bathroom_door_bulb
+    host: 192.168.31.186
+    token: !secret bathroom_door_bulb_token
+
+frontend:
+  themes:
+    happy:
+      lovelace-background: center / cover no-repeat url('/local/bg.jpg') fixed
+      primary-color: '#D2691E'
+      #ha-card-border-radius: '15px'                                                  
+      ha-card-background: "rgba(255, 255, 255, 0.3)"       
+      #ha-card-box-shadow: "0px 5px 5px rgba(0,0,0,0.5)"     
+      #paper-card-background-color: "rgba(0, 0, 0, 1.0)"
+
+google:
+  client_id: 931516325886-ucv71si9uvcth9759frjrfl0ef4k046h.apps.googleusercontent.com
+  client_secret: !secret google_client_secret
+
+spotify:
+  client_id: f96d55285aba4eb69161b6a57460dc4d
+  client_secret: !secret spotify_client_secret
+
+media_player:
+  platform: mpd
+  host: 192.168.31.12
