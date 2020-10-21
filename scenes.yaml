@@ -1,40 +1,33 @@
-- id: '1602436106862'
-  name: SLEEP
+- id: '1602797111201'
+  name: daybreak
   entities:
-    light.l1:
-      min_mireds: 175
-      max_mireds: 333
-      brightness: 8
-      color_temp: 333
-      model: philips.light.bulb
-      scene: 0
-      delayed_turn_off:
-      friendly_name: 書桌燈
-      supported_features: 3
-      state: 'on'
-    light.yi_gui_deng:
-      min_mireds: 175
-      max_mireds: 333
-      model: philips.light.bulb
-      scene: 0
-      delayed_turn_off:
-      friendly_name: 衣櫃燈
-      supported_features: 3
+    light.bedroom_lightstrip:
+      min_mireds: 153
+      max_mireds: 588
+      effect_list:
+      - Strobe color
+      - Police
+      - Christmas
+      - RGB
+      - Random Loop
+      - Fast Random Loop
+      - LSD
+      - Slowdown
+      - Disco
+      - Strobe epilepsy!
+      - Alarm
+      - Police2
+      - WhatsApp
+      - Facebook
+      - Twitter
+      - Slow Temp
+      - Stop
+      - Fire Flicker
+      flowing: false
+      friendly_name: bedroom_lightstrip
+      supported_features: 63
       state: 'off'
-    light.yu_shi_men_kou_deng:
-      min_mireds: 175
-      max_mireds: 333
-      model: philips.light.bulb
-      scene: 0
-      delayed_turn_off:
-      friendly_name: 浴室門口燈
-      supported_features: 3
-      state: 'off'
-  icon: mdi:sleep
-- id: '1602436184780'
-  name: Wake UP!
-  entities:
-    light.l1:
+    light.bedroom_closet:
       min_mireds: 175
       max_mireds: 333
       brightness: 255
@@ -42,10 +35,10 @@
       model: philips.light.bulb
       scene: 0
       delayed_turn_off:
-      friendly_name: 書桌燈
+      friendly_name: closet_bulb
       supported_features: 3
       state: 'on'
-    light.yi_gui_deng:
+    light.bedroom_desk:
       min_mireds: 175
       max_mireds: 333
       brightness: 255
@@ -53,10 +46,10 @@
       model: philips.light.bulb
       scene: 0
       delayed_turn_off:
-      friendly_name: 衣櫃燈
+      friendly_name: desk_bulb
       supported_features: 3
       state: 'on'
-    light.yu_shi_men_kou_deng:
+    light.bedroom_door1:
       min_mireds: 175
       max_mireds: 333
       brightness: 255
@@ -64,14 +57,43 @@
       model: philips.light.bulb
       scene: 0
       delayed_turn_off:
-      friendly_name: 浴室門口燈
+      friendly_name: bedroom_door_bulb
       supported_features: 3
+      state: 'on'
+    light.bedroom_door2:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 255
+      color_temp: 175
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: bathroom_door_bulb
+      supported_features: 3
+      state: 'on'
+    light.livingroom_bulb1:
+      restored: true
+      min_mireds: 175
+      max_mireds: 333
+      supported_features: 3
+      friendly_name: livingroom_bulb1
+      state: unavailable
+    light.livingroom_bulb2:
+      restored: true
+      min_mireds: 175
+      max_mireds: 333
+      supported_features: 3
+      friendly_name: livingroom_bulb2
+      state: unavailable
+    switch.bedroom_dehumidifier:
+      friendly_name: bedroom_dehumidifier
+      icon: mdi:water-off
       state: 'on'
   icon: mdi:weather-sunny
-- id: '1602469659072'
-  name: Relax
+- id: '1602797161435'
+  name: relax
   entities:
-    light.l1:
+    light.bedroom_closet:
       min_mireds: 175
       max_mireds: 333
       brightness: 255
@@ -79,10 +101,10 @@
       model: philips.light.bulb
       scene: 0
       delayed_turn_off:
-      friendly_name: 書桌燈
+      friendly_name: closet_bulb
       supported_features: 3
       state: 'on'
-    light.yi_gui_deng:
+    light.bedroom_desk:
       min_mireds: 175
       max_mireds: 333
       brightness: 255
@@ -90,10 +112,10 @@
       model: philips.light.bulb
       scene: 0
       delayed_turn_off:
-      friendly_name: 衣櫃燈
+      friendly_name: desk_bulb
       supported_features: 3
       state: 'on'
-    light.yu_shi_men_kou_deng:
+    light.bedroom_door1:
       min_mireds: 175
       max_mireds: 333
       brightness: 255
@@ -101,7 +123,530 @@
       model: philips.light.bulb
       scene: 0
       delayed_turn_off:
-      friendly_name: 浴室門口燈
+      friendly_name: bedroom_door_bulb
+      supported_features: 3
+      state: 'on'
+    light.bedroom_lightstrip:
+      min_mireds: 153
+      max_mireds: 588
+      effect_list:
+      - Strobe color
+      - Police
+      - Christmas
+      - RGB
+      - Random Loop
+      - Fast Random Loop
+      - LSD
+      - Slowdown
+      - Disco
+      - Strobe epilepsy!
+      - Alarm
+      - Police2
+      - WhatsApp
+      - Facebook
+      - Twitter
+      - Slow Temp
+      - Stop
+      - Fire Flicker
+      flowing: false
+      friendly_name: bedroom_lightstrip
+      supported_features: 63
+      state: 'off'
+    light.bedroom_door2:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 255
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: bathroom_door_bulb
+      supported_features: 3
+      state: 'on'
+    light.livingroom_bulb1:
+      min_mireds: 175
+      max_mireds: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: livingroom_bulb1
+      supported_features: 3
+      state: 'off'
+    light.livingroom_bulb2:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 255
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: livingroom_bulb2
       supported_features: 3
       state: 'on'
   icon: mdi:emoticon-kiss-outline
+- id: '1602797206360'
+  name: sleep
+  entities:
+    light.bedroom_lightstrip:
+      min_mireds: 153
+      max_mireds: 588
+      effect_list:
+      - Strobe color
+      - Police
+      - Christmas
+      - RGB
+      - Random Loop
+      - Fast Random Loop
+      - LSD
+      - Slowdown
+      - Disco
+      - Strobe epilepsy!
+      - Alarm
+      - Police2
+      - WhatsApp
+      - Facebook
+      - Twitter
+      - Slow Temp
+      - Stop
+      - Fire Flicker
+      brightness: 3
+      hs_color:
+      - 29.412
+      - 100
+      rgb_color:
+      - 255
+      - 125
+      - 0
+      xy_color:
+      - 0.615
+      - 0.372
+      flowing: false
+      friendly_name: bedroom_lightstrip
+      supported_features: 63
+      state: 'on'
+    light.bedroom_closet:
+      min_mireds: 175
+      max_mireds: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: closet_bulb
+      supported_features: 3
+      state: 'off'
+    light.bedroom_desk:
+      min_mireds: 175
+      max_mireds: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: desk_bulb
+      supported_features: 3
+      state: 'off'
+    light.bedroom_door1:
+      min_mireds: 175
+      max_mireds: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: bedroom_door_bulb
+      supported_features: 3
+      state: 'off'
+    light.bedroom_door2:
+      min_mireds: 175
+      max_mireds: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: bathroom_door_bulb
+      supported_features: 3
+      state: 'off'
+    light.livingroom_bulb1:
+      min_mireds: 175
+      max_mireds: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: livingroom_bulb1
+      supported_features: 3
+      state: 'off'
+    light.livingroom_bulb2:
+      min_mireds: 175
+      max_mireds: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: livingroom_bulb2
+      supported_features: 3
+      state: 'off'
+    switch.bedroom_dehumidifier:
+      friendly_name: bedroom_dehumidifier
+      icon: mdi:water-off
+      state: 'off'
+    switch.bedroom_fan:
+      friendly_name: bedroom_fan
+      icon: mdi:fan
+      state: 'on'
+  icon: mdi:sleep
+- id: '1602807023838'
+  name: blackout
+  entities:
+    switch.livingroom_fan:
+      friendly_name: livingroom_fan
+      state: 'off'
+    switch.bedroom_dehumidifier:
+      friendly_name: bedroom_dehumidifier
+      icon: mdi:water-off
+      state: 'off'
+    switch.bedroom_fan:
+      friendly_name: bedroom_fan
+      icon: mdi:fan
+      state: 'off'
+    light.bedroom_lightstrip:
+      min_mireds: 153
+      max_mireds: 588
+      effect_list:
+      - Strobe color
+      - Police
+      - Christmas
+      - RGB
+      - Random Loop
+      - Fast Random Loop
+      - LSD
+      - Slowdown
+      - Disco
+      - Strobe epilepsy!
+      - Alarm
+      - Police2
+      - WhatsApp
+      - Facebook
+      - Twitter
+      - Slow Temp
+      - Stop
+      - Fire Flicker
+      flowing: false
+      friendly_name: bedroom_lightstrip
+      supported_features: 63
+      state: 'off'
+    light.bedroom_closet:
+      min_mireds: 175
+      max_mireds: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: closet_bulb
+      supported_features: 3
+      state: 'off'
+    light.livingroom_bulb1:
+      restored: true
+      min_mireds: 175
+      max_mireds: 333
+      supported_features: 3
+      friendly_name: livingroom_bulb1
+      state: unavailable
+    light.livingroom_bulb2:
+      restored: true
+      min_mireds: 175
+      max_mireds: 333
+      supported_features: 3
+      friendly_name: livingroom_bulb2
+      state: unavailable
+    light.bedroom_door1:
+      min_mireds: 175
+      max_mireds: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: bedroom_door_bulb
+      supported_features: 3
+      state: 'off'
+    light.bedroom_door2:
+      min_mireds: 175
+      max_mireds: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: bathroom_door_bulb
+      supported_features: 3
+      state: 'off'
+    light.bedroom_desk:
+      min_mireds: 175
+      max_mireds: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: desk_bulb
+      supported_features: 3
+      state: 'off'
+  icon: mdi:power-plug-off
+- id: '1602807113331'
+  name: welcome
+  entities:
+    switch.bedroom_dehumidifier:
+      friendly_name: bedroom_dehumidifier
+      icon: mdi:water-off
+      state: 'on'
+    switch.bedroom_fan:
+      friendly_name: bedroom_fan
+      icon: mdi:fan
+      state: 'on'
+    light.bedroom_closet:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 255
+      color_temp: 175
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: closet_bulb
+      supported_features: 3
+      state: 'on'
+    light.bedroom_desk:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 255
+      color_temp: 175
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: desk_bulb
+      supported_features: 3
+      state: 'on'
+    light.bedroom_door1:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 255
+      color_temp: 175
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: bedroom_door_bulb
+      supported_features: 3
+      state: 'on'
+    light.bedroom_door2:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 255
+      color_temp: 175
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: bathroom_door_bulb
+      supported_features: 3
+      state: 'on'
+    light.livingroom_bulb1:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 255
+      color_temp: 175
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: livingroom_bulb1
+      supported_features: 3
+      state: 'on'
+    light.livingroom_bulb2:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 255
+      color_temp: 175
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: livingroom_bulb2
+      supported_features: 3
+      state: 'on'
+    media_player.nest_audio:
+      friendly_name: Nolan's assistant
+      supported_features: 152461
+      state: 'off'
+  icon: mdi:hand
+- id: '1603267603087'
+  name: faint
+  entities:
+    light.bedroom_closet:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 3
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: closet_bulb
+      supported_features: 3
+      state: 'on'
+    light.bedroom_desk:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 3
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: desk_bulb
+      supported_features: 3
+      state: 'on'
+    light.bedroom_door1:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 3
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: bedroom_door_bulb
+      supported_features: 3
+      state: 'on'
+    light.bedroom_door2:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 3
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: bathroom_door_bulb
+      supported_features: 3
+      state: 'on'
+    light.livingroom_bulb1:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 3
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: livingroom_bulb1
+      supported_features: 3
+      state: 'on'
+    light.livingroom_bulb2:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 3
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: livingroom_bulb2
+      supported_features: 3
+      state: 'on'
+    light.bedroom_lightstrip:
+      min_mireds: 153
+      max_mireds: 588
+      effect_list:
+      - Strobe color
+      - Police
+      - Christmas
+      - RGB
+      - Random Loop
+      - Fast Random Loop
+      - LSD
+      - Slowdown
+      - Disco
+      - Strobe epilepsy!
+      - Alarm
+      - Police2
+      - WhatsApp
+      - Facebook
+      - Twitter
+      - Slow Temp
+      - Stop
+      - Fire Flicker
+      flowing: false
+      friendly_name: bedroom_lightstrip
+      supported_features: 63
+      state: 'off'
+- id: '1603267604239'
+  name: faint
+  entities:
+    light.bedroom_closet:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 3
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: closet_bulb
+      supported_features: 3
+      state: 'on'
+    light.bedroom_desk:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 3
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: desk_bulb
+      supported_features: 3
+      state: 'on'
+    light.bedroom_door1:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 3
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: bedroom_door_bulb
+      supported_features: 3
+      state: 'on'
+    light.bedroom_door2:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 3
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: bathroom_door_bulb
+      supported_features: 3
+      state: 'on'
+    light.livingroom_bulb1:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 3
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: livingroom_bulb1
+      supported_features: 3
+      state: 'on'
+    light.livingroom_bulb2:
+      min_mireds: 175
+      max_mireds: 333
+      brightness: 3
+      color_temp: 333
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
+      friendly_name: livingroom_bulb2
+      supported_features: 3
+      state: 'on'
+    light.bedroom_lightstrip:
+      min_mireds: 153
+      max_mireds: 588
+      effect_list:
+      - Strobe color
+      - Police
+      - Christmas
+      - RGB
+      - Random Loop
+      - Fast Random Loop
+      - LSD
+      - Slowdown
+      - Disco
+      - Strobe epilepsy!
+      - Alarm
+      - Police2
+      - WhatsApp
+      - Facebook
+      - Twitter
+      - Slow Temp
+      - Stop
+      - Fire Flicker
+      flowing: false
+      friendly_name: bedroom_lightstrip
+      supported_features: 63
+      state: 'off'

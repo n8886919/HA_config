@@ -1,22 +1,3 @@
-- id: '1602468784679'
-  alias: snapshot_partial at midnight
-  description: ''
-  trigger:
-  - platform: time
-    at: 00:00:00
-  condition:
-  - condition: time
-    weekday:
-    - mon
-    - tue
-    - wed
-    - thu
-    - fri
-    - sat
-  action:
-  - service: hassio.snapshot_partial
-    data: {}
-  mode: single
 - id: '1602469065748'
   alias: snapshot_full in the weekend
   description: ''
@@ -36,18 +17,46 @@
   description: ''
   trigger:
   - platform: time
-    at: 08:30:00
+    at: 08:00:00
   condition: []
   action:
-  - scene: scene.wake_up
+  - scene: scene.daybreak
   mode: single
 - id: '1602647976343'
   alias: Time to sleep~
   description: ''
   trigger:
   - platform: time
-    at: 00:00:00
+    at: 00:01:00
   condition: []
   action:
-  - scene: scene.shui_jue
+  - scene: scene.sleep
+  mode: single
+- id: '1603268307656'
+  alias: Stop dehumidification
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.mi_humidity_bedroom_mitemp_bt
+    below: '65'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 31645aa90c3311eb8ddbfd454cf84739
+    entity_id: switch.bedroom_dehumidifier
+    domain: switch
+  - service: tts.google_translate_say
+    data:
+      message: complete dehumidification, turn off dehumidifier
+      entity_id: media_player.nest_audio
+  mode: single
+- id: '1603269034892'
+  alias: Time to relax~
+  description: ''
+  trigger:
+  - platform: time
+    at: '18:00:00'
+  condition: []
+  action:
+  - scene: scene.relax
   mode: single
