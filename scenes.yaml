@@ -459,7 +459,7 @@
       friendly_name: Nolan's assistant
       supported_features: 152461
       state: 'off'
-  icon: mdi:hand
+  icon: mdi:connection
 - id: '1603267603087'
   name: faint
   entities:
