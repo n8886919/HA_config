@@ -1,19 +1,36 @@
 # Home Assistant Configuration
-What is Home Assistant? 
->Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server.\
 ![](pictures/lovelace.jpg)
+What is Home Assistant? 
+>Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server.
 
-# 資源
-## Useful link
-[HA官網](https://www.home-assistant.io/)\
-[Material Design Icon](https://materialdesignicons.com/)
-## Mobile APP
-+ from apk:\
-  [<img src="pictures/xiaomi.webp" alt="drawing" width="50"/>MiHome mod](https://www.kapiba.ru/2017/11/mi-home.html)(推薦安裝,取得米家裝置隱藏資訊)
-+ from google play:\
-  [<img src="pictures/home_assistant.webp" alt="drawing" width="50"/>](https://play.google.com/store/apps/details?id=io.homeassistant.companion.android)[<img src="pictures/google_home.webp" alt="drawing" width="50"/>](https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app&hl=zh_TW)[<img src="pictures/yeelight.webp" alt="drawing" width="50"/>](https://play.google.com/store/apps/details?id=com.yeelight.cherry&hl=zh_TW)[<img src="pictures/smart_life.webp" alt="drawing" width="50"/>](https://play.google.com/store/apps/details?id=com.tuya.smartlife&hl=zh_TW)[<img src="pictures/ipcam.webp" alt="drawing" width="50"/>](https://play.google.com/store/apps/details?id=com.pas.webcam&hl=zh_TW)
+# :fleur_de_lis:功能
+## 自動化
++ snapshot_full in the weekend\
+  每周備份系統
++ Stop dehumidification\
+  濕度低於65關閉除溼機,並以nest audio語音告知
++ Time to wake up!\
+  08:00:00啟動daybreak場景
++ Time to relax~\
+  18:00:00啟動relax場景
++ Time to sleep~\
+  01:00:00啟動sleep場景
 
-# 整合元件
+## 場景
++ daybreak:sunny:\
+  房間亮白光,關閉客廳燈
++ faint:crescent_moon:\
+  房間客廳暗黃光
++ relax:kissing_heart:\
+  房間亮黃光
++ sleep:zzz:\
+  關燈與除濕機,開電風,開炫炮夜燈
++ welcome:crossed_swords:\
+  開開開
++ blackout:bow_and_arrow:\
+  關關關
+
+# :fleur_de_lis:整合元件
 ## 硬體
 + <img src="pictures/xiaomi.webp" alt="drawing" width="20"/>米家智能多模網關\
   <img src="pictures/mi_hub.jpg" alt="drawing" width="150"/>
@@ -66,20 +83,14 @@ It can help you download and update elements, and can also help you discover new
   可以即時看網路速度
 
 
-# Features
-## 自動化
-|名稱                        |行為|
-|-                           |-|
-|snapshot_full in the weekend|每周備份|
-|Stop dehumidification       |濕度低於65關閉除溼機<br>nest audio 語音告知|
-|Time to wake up!            |08:00:00啟動daybreak場景|
-|Time to relax~              |18:00:00啟動relax場景|
-|Time to sleep~              |01:00:00啟動sleep場景|
 
-## 場景
-+ daybreak
-+ faint
-+ relax
-+ sleep
-+ welcome
-+ blackout
+# :fleur_de_lis:資源
+## Useful link
+[HA官網](https://www.home-assistant.io/)\
+[Material Design Icon](https://materialdesignicons.com/)
+## Mobile APP
++ from apk:\
+  [MiHome mod](https://www.kapiba.ru/2017/11/mi-home.html)(推薦安裝,取得米家裝置隱藏資訊)\
+  [<img src="pictures/xiaomi.webp" alt="drawing" width="50"/>](https://www.kapiba.ru/2017/11/mi-home.html)
++ from google play:\
+  [<img src="pictures/home_assistant.webp" alt="drawing" width="50"/>](https://play.google.com/store/apps/details?id=io.homeassistant.companion.android)[<img src="pictures/google_home.webp" alt="drawing" width="50"/>](https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app&hl=zh_TW)[<img src="pictures/yeelight.webp" alt="drawing" width="50"/>](https://play.google.com/store/apps/details?id=com.yeelight.cherry&hl=zh_TW)[<img src="pictures/smart_life.webp" alt="drawing" width="50"/>](https://play.google.com/store/apps/details?id=com.tuya.smartlife&hl=zh_TW)[<img src="pictures/ipcam.webp" alt="drawing" width="50"/>](https://play.google.com/store/apps/details?id=com.pas.webcam&hl=zh_TW)
