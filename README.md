@@ -1,8 +1,7 @@
 # Home Assistant Configuration
 What is Home Assistant? 
->Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server.
-
-<img src="pictures/lovelace.jpg" alt="drawing" width="600"/>
+>Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server.\
+![](pictures/lovelace.jpg)
 
 # 資源
 ## Useful link
@@ -72,7 +71,7 @@ It can help you download and update elements, and can also help you discover new
 |名稱                        |行為|
 |-                           |-|
 |snapshot_full in the weekend|每周備份|
-|Stop dehumidification       |濕度低於65關閉除溼機|
+|Stop dehumidification       |濕度低於65關閉除溼機<br>nest audio 語音告知|
 |Time to wake up!            |08:00:00啟動daybreak場景|
 |Time to relax~              |18:00:00啟動relax場景|
 |Time to sleep~              |01:00:00啟動sleep場景|
