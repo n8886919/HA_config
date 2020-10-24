@@ -1,36 +1,60 @@
-- id: '1602469065748'
-  alias: snapshot_full in the weekend
-  description: ''
-  trigger:
-  - platform: time
-    at: 00:00:00
-  condition:
-  - condition: time
-    weekday:
-    - sun
-  action:
-  - service: hassio.snapshot_full
-    data: {}
-  mode: single
 - id: '1602646670735'
-  alias: Time to wake up!
-  description: ''
+  alias: Time to wake up
+  description: activate daybreak scene and play "Wake Up Happy" playlist
   trigger:
   - platform: time
     at: 08:00:00
   condition: []
   action:
   - scene: scene.daybreak
+  - service: media_player.volume_set
+    entity_id: media_player.nest_audio
+    data:
+      volume_level: 0.5
+  - service: tts.cloud_say
+    data:
+      message: It's time to wake up, good morning
+      entity_id: media_player.nest_audio
+  - delay: '3'
+  - service: media_player.shuffle_set
+    data:
+      shuffle: true
+    entity_id: media_player.spotify_wang_hao_ping
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.spotify_wang_hao_ping
+      media_content_id: spotify:playlist:37i9dQZF1DX0UrRvztWcAU
+      media_content_type: playlist
+    entity_id: media_player.spotify_wang_hao_ping
   mode: single
-- id: '1602647976343'
-  alias: Time to sleep~
-  description: ''
+- id: '1603269034892'
+  alias: Time to relax
+  description: activate relax scene and play "Relaxing Music" playlist
   trigger:
   - platform: time
-    at: 00:01:00
+    at: '18:00:00'
   condition: []
   action:
-  - scene: scene.sleep
+  - scene: scene.relax
+  - service: media_player.volume_set
+    entity_id: media_player.nest_audio
+    data:
+      volume_level: 0.5
+  - service: tts.cloud_say
+    data:
+      message: It's time to relax
+      entity_id: media_player.nest_audio
+  - delay: '3'
+  - service: media_player.shuffle_set
+    data:
+      shuffle: true
+    entity_id: media_player.spotify_wang_hao_ping
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.spotify_wang_hao_ping
+      media_content_id: spotify:album:4owrox6fGHGbH3GfyjdfTo
+      media_content_type: playlist
+    entity_id: media_player.spotify_wang_hao_ping
   mode: single
 - id: '1603268307656'
   alias: Stop dehumidification
@@ -50,13 +74,46 @@
       message: complete dehumidification, turn off dehumidifier
       entity_id: media_player.nest_audio
   mode: single
-- id: '1603269034892'
-  alias: Time to relax~
+- id: '1602469065748'
+  alias: snapshot_full in the weekend
   description: ''
+  mode: single
   trigger:
   - platform: time
-    at: '18:00:00'
+    at: 00:00:00
+  condition:
+  - condition: time
+    weekday:
+    - sun
+  action:
+  - service: hassio.snapshot_full
+    data: {}
+- id: '1603448358544'
+  alias: Time to sleep
+  description: activate weak scene and play "Sleep Piano" playlist
+  trigger:
+  - platform: time
+    at: 00:00:00
   condition: []
   action:
-  - scene: scene.relax
+  - scene: scene.weak
+  - service: media_player.volume_set
+    entity_id: media_player.nest_audio
+    data:
+      volume_level: 0.3
+  - service: tts.cloud_say
+    data:
+      message: It's time to sleep
+      entity_id: media_player.nest_audio
+  - delay: '3'
+  - service: media_player.shuffle_set
+    data:
+      shuffle: true
+    entity_id: media_player.spotify_wang_hao_ping
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.spotify_wang_hao_ping
+      media_content_id: spotify:playlist:1Ty8JKNLTI5C7DKE65jvb9
+      media_content_type: playlist
+    entity_id: media_player.spotify_wang_hao_ping
   mode: single

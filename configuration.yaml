@@ -91,16 +91,16 @@ google:
   client_id: 931516325886-ucv71si9uvcth9759frjrfl0ef4k046h.apps.googleusercontent.com
   client_secret: !secret google_client_secret
 
-google_assistant:
-  project_id: regal-muse-292504
-  service_account: !include My Project-1b8d49193d43.json
-  report_state: true
-  exposed_domains:
-    - switch
-    - light
-    - scene
-    - media_player
-    - vacuum
+# google_assistant:
+#   project_id: regal-muse-292504
+#   service_account: !include My Project-1b8d49193d43.json
+#   report_state: true
+#   exposed_domains:
+#     - switch
+#     - light
+#     - scene
+#     - media_player
+#     - vacuum
 
 spotify:
   client_id: f96d55285aba4eb69161b6a57460dc4d
