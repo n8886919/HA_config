@@ -1,8 +1,12 @@
-.cloud
-secrets.yaml
-.google.token
-
-www
-tts
-custom_components
 *.log
+.cloud
+.google.token
+.storage
+custom_components
+secrets.yaml
+tts
+.shopping_list.json
+www
+home-assistant_v2.db
+My Project-1b8d49193d43.json
+themes
