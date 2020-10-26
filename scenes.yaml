@@ -72,19 +72,25 @@
       supported_features: 3
       state: 'on'
     light.livingroom_bulb1:
-      restored: true
       min_mireds: 175
       max_mireds: 333
       supported_features: 3
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
       friendly_name: livingroom_bulb1
-      state: unavailable
+      state: 'off'
     light.livingroom_bulb2:
-      restored: true
       min_mireds: 175
       max_mireds: 333
+      brightness: 255
       supported_features: 3
+      color_temp: 175
+      model: philips.light.bulb
+      scene: 0
+      delayed_turn_off:
       friendly_name: livingroom_bulb2
-      state: unavailable
+      state: 'on'
     switch.bedroom_dehumidifier:
       friendly_name: bedroom_dehumidifier
       icon: mdi:water-off
@@ -171,24 +177,6 @@
       delayed_turn_off:
       friendly_name: livingroom_bulb1
       supported_features: 3
-      state: 'off'
-    light.livingroom_bulb2:
-      min_mireds: 175
-      max_mireds: 333
-      brightness: 255
-      color_temp: 333
-      model: philips.light.bulb
-      scene: 0
-      delayed_turn_off:
-      friendly_name: livingroom_bulb2
-      supported_features: 3
-      state: 'on'
-    script.1603074244031:
-      last_triggered:
-      mode: single
-      current: 0
-      friendly_name: 'relax(playlist: Relaxing Music)'
-      icon: mdi:emoticon-kiss
       state: 'off'
   icon: mdi:emoticon-kiss
 - id: '1602797206360'
@@ -342,23 +330,23 @@
     light.livingroom_bulb1:
       min_mireds: 175
       max_mireds: 333
+      brightness: 6
+      color_temp: 175
       model: philips.light.bulb
       scene: 0
       delayed_turn_off:
       friendly_name: livingroom_bulb1
       supported_features: 3
-      state: 'off'
+      state: 'on'
     light.livingroom_bulb2:
       min_mireds: 175
       max_mireds: 333
-      brightness: 255
-      color_temp: 333
       model: philips.light.bulb
       scene: 0
       delayed_turn_off:
       friendly_name: livingroom_bulb2
       supported_features: 3
-      state: 'on'
+      state: 'off'
     light.bedroom_door1:
       min_mireds: 175
       max_mireds: 333
@@ -453,17 +441,6 @@
       friendly_name: livingroom_bulb1
       supported_features: 3
       state: 'on'
-    light.livingroom_bulb2:
-      min_mireds: 175
-      max_mireds: 333
-      brightness: 255
-      color_temp: 175
-      model: philips.light.bulb
-      scene: 0
-      delayed_turn_off:
-      friendly_name: livingroom_bulb2
-      supported_features: 3
-      state: 'on'
     light.bedroom_lightstrip:
       min_mireds: 153
       max_mireds: 588
@@ -487,17 +464,16 @@
       - Stop
       - Fire Flicker
       brightness: 3
-      color_temp: 153
       hs_color:
-      - 225.176
+      - 254.824
       - 100
       rgb_color:
-      - 0
       - 63
+      - 0
       - 255
       xy_color:
-      - 0.137
-      - 0.065
+      - 0.157
+      - 0.05
       flowing: false
       friendly_name: bedroom_lightstrip
       supported_features: 63
@@ -535,7 +511,7 @@
     light.bedroom_closet:
       min_mireds: 175
       max_mireds: 333
-      brightness: 11
+      brightness: 13
       color_temp: 333
       model: philips.light.bulb
       scene: 0
@@ -546,7 +522,7 @@
     light.bedroom_desk:
       min_mireds: 175
       max_mireds: 333
-      brightness: 11
+      brightness: 13
       color_temp: 333
       model: philips.light.bulb
       scene: 0
@@ -557,7 +533,7 @@
     light.bedroom_door1:
       min_mireds: 175
       max_mireds: 333
-      brightness: 11
+      brightness: 13
       color_temp: 333
       model: philips.light.bulb
       scene: 0
@@ -568,7 +544,7 @@
     light.bedroom_door2:
       min_mireds: 175
       max_mireds: 333
-      brightness: 11
+      brightness: 13
       color_temp: 333
       model: philips.light.bulb
       scene: 0
@@ -579,23 +555,12 @@
     light.livingroom_bulb1:
       min_mireds: 175
       max_mireds: 333
-      brightness: 11
+      brightness: 13
       color_temp: 333
       model: philips.light.bulb
       scene: 0
       delayed_turn_off:
       friendly_name: livingroom_bulb1
-      supported_features: 3
-      state: 'on'
-    light.livingroom_bulb2:
-      min_mireds: 175
-      max_mireds: 333
-      brightness: 11
-      color_temp: 333
-      model: philips.light.bulb
-      scene: 0
-      delayed_turn_off:
-      friendly_name: livingroom_bulb2
       supported_features: 3
       state: 'on'
   icon: mdi:emoticon-kiss-outline

@@ -20,6 +20,10 @@
     data:
       shuffle: true
     entity_id: media_player.spotify_wang_hao_ping
+  - service: media_player.select_source
+    data:
+      source: Galaxy A8+ (2018)
+    entity_id: media_player.spotify_wang_hao_ping
   - service: media_player.play_media
     data:
       entity_id: media_player.spotify_wang_hao_ping
@@ -49,6 +53,10 @@
     data:
       shuffle: true
     entity_id: media_player.spotify_wang_hao_ping
+  - service: media_player.select_source
+    data:
+      source: Galaxy A8+ (2018)
+    entity_id: media_player.spotify_wang_hao_ping
   - service: media_player.play_media
     data:
       entity_id: media_player.spotify_wang_hao_ping
@@ -61,8 +69,8 @@
   description: ''
   trigger:
   - platform: numeric_state
-    entity_id: sensor.mi_humidity_bedroom_mitemp_bt
-    below: '65'
+    below: '60'
+    entity_id: sensor.bedroom_mitemp_bt_humidity
   condition: []
   action:
   - type: turn_off
@@ -110,10 +118,38 @@
     data:
       shuffle: true
     entity_id: media_player.spotify_wang_hao_ping
+  - service: media_player.select_source
+    data:
+      source: Galaxy A8+ (2018)
+    entity_id: media_player.spotify_wang_hao_ping
   - service: media_player.play_media
     data:
       entity_id: media_player.spotify_wang_hao_ping
       media_content_id: spotify:playlist:1Ty8JKNLTI5C7DKE65jvb9
       media_content_type: playlist
     entity_id: media_player.spotify_wang_hao_ping
+  mode: single
+- id: '1603596241216'
+  alias: Start dehumidification
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.bedroom_mitemp_bt_humidity
+    above: '70'
+    for: 01:00:00
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 31645aa90c3311eb8ddbfd454cf84739
+    entity_id: switch.bedroom_dehumidifier
+    domain: switch
+  - type: turn_on
+    device_id: 31645aa90c3311eb8ddbfd454cf84739
+    entity_id: switch.bedroom_dehumidifier
+    domain: switch
+  - delay: '1'
+  - service: tts.cloud_say
+    data:
+      entity_id: media_player.nest_audio
+      message: humidity is high,please turn on de umidifier
   mode: single

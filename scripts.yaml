@@ -1,19 +1,19 @@
 get_off:
   alias: leaving
   sequence:
-  - delay: '1'
+  - service: media_player.media_pause
+    data: {}
+    entity_id: media_player.spotify_wang_hao_ping
+  - scene: scene.blackout
+  - delay: '5'
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.nest_audio
+      volume_level: 0.8
   - service: tts.cloud_say
     data:
       entity_id: media_player.nest_audio
       message: Remember to take your wallet, cellphone and key
-  - scene: scene.blackout
-  - service: media_player.media_pause
-    data: {}
-    entity_id: media_player.spotify_wang_hao_ping
-  - service: media_player.shuffle_set
-    data:
-      shuffle: true
-    entity_id: media_player.spotify_wang_hao_ping
   mode: single
   icon: mdi:power-plug-off
 arrival:
@@ -28,10 +28,16 @@ arrival:
     data:
       shuffle: true
     entity_id: media_player.spotify_wang_hao_ping
+  - service: media_player.select_source
+    data:
+      source: Galaxy A8+ (2018)
+    entity_id: media_player.spotify_wang_hao_ping
   - service: media_player.play_media
     data:
       media_content_id: spotify:playlist:37i9dQZF1EuCyMSGmbduMB
       media_content_type: playlist
     entity_id: media_player.spotify_wang_hao_ping
-  mode: single
+  - delay: '300'
+  - scene: scene.relax
+  mode: restart
   icon: mdi:connection

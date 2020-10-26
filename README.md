@@ -57,7 +57,7 @@ What is Home Assistant?
   + 重新命名裝置後直接<img src="pictures/google_assistant.webp" alt="drawing" width="20"/>語音控制
 
 + [<img src="pictures/google.png" alt="drawing" width="50"/> Nest Audio](https://store.google.com/tw/product/nest_audio)\
-  <img src="pictures/bt.png" alt="drawing" width="20"/> :heavy_plus_sign: <img src="pictures/wifi.jpg" alt="drawing" width="20"/> :heavy_plus_sign: <img src="pictures/google_assistant.webp" alt="drawing" width="20"/> :heavy_plus_sign: :musical_note: :heavy_plus_sign: :microphone:
+  <img src="pictures/bt.png" alt="drawing" width="20"/> :heavy_plus_sign: <img src="pictures/wifi.jpg" alt="drawing" width="20"/> :heavy_plus_sign: <img src="pictures/google_assistant.webp" alt="drawing" width="20"/> :heavy_plus_sign: :musical_note: :heavy_plus_sign: :microphone:\
   <img src="pictures/nest_audio.jpg" alt="drawing" width="150"/>
 
 + TODO:  <img src="pictures/google.png" alt="drawing" width="50"/> keep
